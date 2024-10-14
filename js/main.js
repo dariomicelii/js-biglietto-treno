@@ -9,10 +9,10 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 // RACCOLTA DATI
 // chiedere il numero di chilometri da percorrere
-const numKilom = prompt("Quanti kilometri devi percorrere?")
+const numKilom = prompt("Quanti kilometri devi percorrere?", "300")
 console.log(numKilom);
 // chiedere età del passeggero
-const userAge = prompt("Quanti anni hai?")
+const userAge = prompt("Quanti anni hai?", "18")
 console.log(userAge);
 
 
