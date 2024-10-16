@@ -26,21 +26,21 @@ let ticketPrice = Math.round(numKilom * 0.21)
 // SE eta è minore di 18 
 if(userAge < maggioreEta && userAge > 1){
     // applichiamo sconto del 20%
-    const youngDiscount = Math.round(ticketPrice * 20) / 100;
+    const youngDiscount = (ticketPrice * 20) / 100;
     // prepariamo messaggio prezzo scontato
-    message = "Hai diritto ad uno sconto del 20%! Ecco il prezzo scontato del tuo biglietto:" + " " + youngDiscount.toString()
+    message = "Il prezzo del tuo biglietto è di:" + " " + ticketPrice.toString + "Hai diritto ad uno sconto del 20%! Ecco il prezzo scontato del tuo biglietto:" + " " + youngDiscount.toFixed(2)
 }
 
 // ALTRIMENTI SE eta è maggiore di 65
 else if(userAge > over65 && userAge > 1){
     // applichiamo sconto del 40%
-    const over65Discount = Math.round(ticketPrice * 40) / 100;
+    const over65Discount = (ticketPrice * 40) / 100;
     // prepariamo messaggio prezzo scontato
-    message = "Hai diritto ad uno sconto del 40%! Ecco il prezzo scontato del tuo biglietto:" + " " + over65Discount.toString() 
+    message = " Il prezzo del tuo biglietto è di:" + " " + "ticketPrice.toString + Hai diritto ad uno sconto del 40%! Ecco il prezzo scontato del tuo biglietto:" + " " + over65Discount.toFixed(2) 
 }
 
-else if(maggioreEta < userAge < over65 && userAge > 1){
-    message = "Non hai diritto ad alcuno sconto =(, il prezzo del tuo biglietto è di:" + " " + ticketPrice.toString()
+else if(userAge >= maggioreEta && userAge <= over65){
+    message = "Non hai diritto ad alcuno sconto =(, il prezzo del tuo biglietto è di:" + " " + ticketPrice.toFixed(2)
 }
 
 else{
